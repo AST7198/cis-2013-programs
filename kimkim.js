@@ -2,29 +2,29 @@ var $ = function (id)
 {
     return document.getElementById(id);
 }
-var floatMonthlyPayment, floatTotalCost, intLoanTerm; 
+var floatBagPrice, floatTotalCost, intBagAmount; 
 
 /*
  *start
-   declare floatMonthlyPayment, intLoanTerm, floatTotalCost
-   get floatMonthlyPayment
-   get intLoanTerm
-   calculate floatTotalCost = floatMonthlyPayment * intLoanTerm
+   declare floatBagPrice, intBagAmount, floatTotalCost
+   get floatBagPrice
+   get intBagAmount
+   calculate floatTotalCost = floatBagPrice * intBagAmount
    output floatTotalCost
   end
 */
  var calculate = function()
  {
-  floatMonthlyPayment = parseFloat($("monthly_payment").value);
-  intLoanTerm = parseInt($("loan_length").value);
-  floatTotalCost= parseFloat(floatMonthlyPayment * intLoanTerm);
+  floatBagPrice = parseFloat($("bag_price").value);
+  intBagAmount = parseInt($("bag_amount").value);
+  floatTotalCost= parseFloat(floatBagPrice * intBagAmount);
   $("total_cost").value = floatTotalCost
  }
  
  window.onload = function () 
 {
-    $("loan_length").value = "";
+    $("bag_amount").value = "";
     $("calc").onclick = calculate;
-    $("monthly_payment").focus();
+    $("bag_price").focus();
     $("total_cost").value = floatTotalCost
 }
