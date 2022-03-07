@@ -20,9 +20,9 @@ floatTotalPts = parseFloat(floatHwPts + floatMidPts + floatFinPts);
 
 intGradeOption = 2;
 
-if(intGradeOption===1)
+if (intGradeOption===1)
 {
-    if(floatTotalPts >= 80)
+    if (floatTotalPts >= 80)
     {
         stringFinalGrade = "Pass";
     }
