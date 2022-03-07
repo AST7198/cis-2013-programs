@@ -18,8 +18,6 @@ intGradeOption = parseFloat(prompt("please enter 1 for Grade, 2 for audit"));
 
 floatTotalPts = parseFloat(floatHwPts + floatMidPts + floatFinPts);
 
-intGradeOption = 2;
-
 if (intGradeOption===1)
 {
     if (floatTotalPts >= 80)
